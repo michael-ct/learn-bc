@@ -338,3 +338,59 @@
     background-color: color("greys", "lighter");
     color: color("greys", "darker");
 }
+
+
+
+//
+// -----------------------------------------------------------------------------
+//
+// CT Stylings override
+//
+// -----------------------------------------------------------------------------
+#ct-logo-and-others {
+    .dropdown {
+        position: unset;
+    }
+    .dropdown--quickSearch {
+        display: block;
+        left: 0 !important;
+        width: 30% !important;
+        .form {
+
+        }
+        .form,
+        .form-field {
+
+        }
+        .form-input {
+
+        }
+    }
+    @include breakpoint("medium") {
+        .dropdown--quickSearch {
+            padding: 0;
+            width: 40% !important;
+            background: transparent;
+            .container {
+                padding: 0;
+            }
+            .form-input {
+                border-radius: 0;
+                border-color: #D1D1D1;
+                padding: 10px;
+                font-size: 14px;
+                max-width: 100%;
+
+                &:focus {
+                    outline: 2px solid #b4bd44 !important;
+                }
+            }
+            .search-icon {
+                position: absolute;
+                top: 12px;
+                right: 15px;
+                cursor: pointer;
+            }
+        }
+    }
+}

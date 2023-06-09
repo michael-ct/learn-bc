@@ -274,3 +274,32 @@
 
     }
 }
+
+
+//
+// -----------------------------------------------------------------------------
+//
+// CT Stylings override
+//
+// -----------------------------------------------------------------------------
+#ct-logo-and-others {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+    .header-logo {
+        font-size: 0;   // 1
+        height: $header-height;
+        margin: 0 remCalc($header-toggle-width); // 2
+        text-align: center;
+
+        @include breakpoint("medium") {
+            height: auto;
+            margin: 0;
+            .header-logo-image-container {
+                min-height: unset;
+            }
+        }
+    }
+}
